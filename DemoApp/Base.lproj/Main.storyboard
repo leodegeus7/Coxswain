@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D4V-dQ-BLh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tAp-ei-odJ">
+            <objects>
+                <viewController id="D4V-dQ-BLh" customClass="ViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bkb-cl-0Kh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmt-nv-ru4" customClass="WaveformView" customModule="Coxswain">
+                                <rect key="frame" x="67" y="529" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lmt-nv-ru4" secondAttribute="height" multiplier="15:8" id="1Jm-po-E1B"/>
+                                    <constraint firstAttribute="width" constant="240" id="aSG-dO-sHs"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ola Murilo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyN-Pb-J9Z">
+                                <rect key="frame" x="60" y="20" width="254" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="92P-Ba-hPc"/>
+                                    <constraint firstAttribute="height" constant="108" id="fL7-IO-4PD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZh-JT-vE0">
+                                <rect key="frame" x="60" y="151" width="40" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUo-ra-l5p">
+                                <rect key="frame" x="232" y="211" width="40" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYc-ML-LmT">
+                                <rect key="frame" x="91" y="280" width="40" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3r-3L-eO2">
+                                <rect key="frame" x="179" y="383" width="40" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UyN-Pb-J9Z" firstAttribute="centerX" secondItem="4Wb-VA-Qry" secondAttribute="centerX" id="9Vh-WR-zpg"/>
+                            <constraint firstItem="lmt-nv-ru4" firstAttribute="centerX" secondItem="4Wb-VA-Qry" secondAttribute="centerX" id="Twg-a9-uvz"/>
+                            <constraint firstItem="4Wb-VA-Qry" firstAttribute="bottom" secondItem="lmt-nv-ru4" secondAttribute="bottom" constant="10" id="bBD-wO-NtX"/>
+                            <constraint firstItem="UyN-Pb-J9Z" firstAttribute="top" secondItem="4Wb-VA-Qry" secondAttribute="top" id="clr-Gk-BKE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Wb-VA-Qry"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelFour" destination="B3r-3L-eO2" id="STJ-UX-uOl"/>
+                        <outlet property="labelOne" destination="rZh-JT-vE0" id="Wrq-3S-Z4X"/>
+                        <outlet property="labelThree" destination="hYc-ML-LmT" id="3KT-6Z-dfF"/>
+                        <outlet property="labelTitle" destination="UyN-Pb-J9Z" id="pNN-ia-Utx"/>
+                        <outlet property="labelTwo" destination="HUo-ra-l5p" id="UcS-aD-Z7m"/>
+                        <outlet property="waveForm" destination="lmt-nv-ru4" id="sBe-Tl-J7f"/>
+                        <segue destination="hrc-hY-VE1" kind="show" identifier="segueToOne" id="mjm-PD-aZm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8X-th-21U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="116.49175412293854"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FzI-rN-fsq">
+            <objects>
+                <viewController id="hrc-hY-VE1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRC-Y3-62M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Até mais!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sth-Um-slX">
+                                <rect key="frame" x="122.5" y="324" width="130.5" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.32549019610000002" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sth-Um-slX" firstAttribute="centerX" secondItem="wuv-dj-EyL" secondAttribute="centerX" id="byj-iA-AAZ"/>
+                            <constraint firstItem="sth-Um-slX" firstAttribute="centerY" secondItem="wuv-dj-EyL" secondAttribute="centerY" id="kIs-Vl-4VB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wuv-dj-EyL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="If9-Zw-URv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096.8" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>

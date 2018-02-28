@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Coxswain.identifyActions(textCount:actualPercent:actions:):Coxswain.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "actionsPassed.contains(where: { (actionEntry) -&gt; Bool in&#10;                        if actionEntry.percent == action.percent {&#10;                            return true&#10;                        } else {&#10;                            return false&#10;                        }&#10;                    })">
+            </PersistentString>
+            <PersistentString
+               value = "(value*(1.0-porcentToSearch))">
+            </PersistentString>
+            <PersistentString
+               value = "actionsPassed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Coxswain.identifyActions(actualPercent:actions:):Coxswain.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "countTimer">
+            </PersistentString>
+            <PersistentString
+               value = "(value - value*0.05)">
+            </PersistentString>
+            <PersistentString
+               value = "actionEntries[1]!">
+            </PersistentString>
+            <PersistentString
+               value = "actionsPassed">
+            </PersistentString>
+            <PersistentString
+               value = "value*0.05">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Coxswain.findActionsInText(text:):Coxswain_Actions.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Coxswain.init(idToSpeech:textToSpeech:):Coxswain.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "finalString">
+            </PersistentString>
+            <PersistentString
+               value = "actionEntries[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
