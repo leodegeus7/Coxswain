@@ -19,10 +19,15 @@ class ViewController: UIViewController, CoxswainDelegate {
     @IBOutlet weak var labelThree: UILabel!
     @IBOutlet weak var labelFour: UILabel!
     
+    var cox:Coxswain!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //let cox = Coxswain(idToSpeech: "ea9bed37-b941-42fe-aab3-c13b2f1a0ec8",textToSpeech: "{diler}Ola Diler{changeBackground3}. Vou te mostrar as possibilidades desta ferramenta chamada Coxwain{waveform}, primeiramente vou contar até quatro. Vamos lá{changeBackground}, um{1}, dois{2}, três{3}, quatro{4}. Estes foram meus primeiros passos para eu dominar{changeBackground2} o mundo{end}.")
-        let cox2 = Coxswain(textToSpeech: "{diler}Ola Murilo{changeBackground3}. Vou te mostrar as possibilidades desta ferramenta chamada Coxwain{waveform}, primeiramente vou contar até quatro. Vamos lá{changeBackground}, um{1}, dois{2}, três{3}, quatro{4}. Estes foram meus primeiros passos {changeBackground2}para eu dominar{end} o mundo{end}.", voice: .PtBrFemale)
+        
+        let cox2 = Coxswain.shared.initialize(textToSpeech: "{diler}Ola Murilo{changeBackground3}. Vou te mostrar as possibilidades desta ferramenta chamada Coxwain{waveform}, primeiramente vou contar até quatro. Vamos lá{changeBackground}, um{1}, dois{2}, três{3}, quatro{4}. Estes foram meus primeiros passos {changeBackground2}para eu dominar{end} o mundo{end}.", voice: .PtBrFemale)
+        cox = cox2
+        Coxswain.shared.addWaveform(view: waveForm)
         cox2.delegate = self
         cox2.addWaveform(view:waveForm)
         cox2.play()
@@ -46,6 +51,7 @@ class ViewController: UIViewController, CoxswainDelegate {
             break
         case "2":
             appearLabel(label: labelTwo)
+            cox.pause()
             break
         case "3":
             appearLabel(label: labelThree)

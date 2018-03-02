@@ -35,17 +35,17 @@ public class Coxswain: NSObject {
     var waveform:WaveformView!
     var actionEntries = [ActionEntry]()
     
+    var actualRate = 0.0
     var streamingStatus:AudioStatus = .Off {
         didSet {
             print(streamingStatus)
         }
     }
     
-    public init(textToSpeech:String,voice:Voice) {
-        super.init()
+    public func initialize(textToSpeech:String,voice:Voice) -> Coxswain {
         initialConfig()
         text = textToSpeech
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerCycle), userInfo: nil, repeats: true)
+        //timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerCycle), userInfo: nil, repeats: true)
         
         (actionEntries,finalString) = findActionsInText(text: textToSpeech)
         actionsPassed = actionEntries
@@ -59,17 +59,17 @@ public class Coxswain: NSObject {
                 }
             }
         }
+        return self
     }
     
     internal override init() {
         super.init()
     }
     
-    public init(idToSpeech:String,textToSpeech:String) {
-        super.init()
+    public func initialize(idToSpeech:String,textToSpeech:String) -> Coxswain {
         initialConfig()
         text = textToSpeech
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerCycle), userInfo: nil, repeats: true)
+        //timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerCycle), userInfo: nil, repeats: true)
         
         (actionEntries,finalString) = findActionsInText(text: textToSpeech)
         actionsPassed = actionEntries
@@ -81,9 +81,10 @@ public class Coxswain: NSObject {
                 print("Didn't find link")
             }
         }
+        return self
     }
     
-    @objc public func timerCycle() {
+    @objc internal func timerCycle() {
         DispatchQueue.main.async {
             if let _ = self.player {
                 self.totalDuration = (self.player.currentItem?.duration.seconds)!
@@ -91,6 +92,7 @@ public class Coxswain: NSObject {
                 if self.player.currentTime().seconds > 0 {
                     if self.streamingStatus == .Loading { self.streamingStatus = .Running}
                     //self.printActualWordInAudio(actualSecond: Float(self.player.currentTime().seconds), duration: Float((self.player.currentItem?.duration.seconds)!), text: self.finalString!)
+                    self.actualRate = Double(self.player.rate)
                     if self.player.currentTime().seconds >= self.totalDuration {
                         self.timer.invalidate()
                         if self.streamingStatus == .Running { self.streamingStatus = .Finished}
@@ -143,6 +145,7 @@ public class Coxswain: NSObject {
     var tries = 0
     public func play() {
         if let _ = streamingLink {
+            timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerCycle), userInfo: nil, repeats: true)
             self.streamingAudio(url: streamingLink!)
         } else {
             sleep(1)

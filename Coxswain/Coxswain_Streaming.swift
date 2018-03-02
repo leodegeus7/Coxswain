@@ -21,6 +21,32 @@ extension Coxswain {
         player = AVPlayer(url: URL(string: url)!)
         player.volume = 1.0
         player.rate = 1.0
-        player.play()
+    }
+    
+    public func resumeSpeech() {
+        if let _ = streamingLink {
+            timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerCycle), userInfo: nil, repeats: true)
+            player.playImmediately(atRate: Float(actualRate))
+        } else {
+            sleep(1)
+            tries = tries + 1
+            if tries < 30 {
+                resumeSpeech()
+            } else {
+                print("Failed to play audio")
+            }
+        }
+        
+    }
+    
+
+    
+    public func pause() {
+        if player.rate != 0 && player.error == nil {
+            player.pause()
+            timer.invalidate()
+            timer = nil
+
+        }
     }
 }

@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "Coxswain"
-s.version      = "0.0.1"
-s.summary      = "This is a easy-to-use framework to create OnBoarding Views"
+s.version      = "0.0.2"
+s.summary      = "A speech framework with react actions in speech-time"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ s.summary      = "This is a easy-to-use framework to create OnBoarding Views"
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 s.description  = <<-DESC
-With this tool is possible to create super personalizable OnBoarding views in your Swift App
+A speech framework with react actions in speech-time using Amazon Polly
 DESC
 
 s.homepage     = "https://github.com/leodegeus7/Coxswain"
